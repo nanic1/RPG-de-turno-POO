@@ -8,8 +8,6 @@ public abstract class Personagem extends Entidade implements Acoes {
     protected int defesa;
     protected List<Habilidade> habilidades = new ArrayList<>();
     protected int defesaTemporaria = 0; // zera-se após absorver um ataque
-
-    // 🔥 NOVO: vínculo de agregação com Jogador (para acessar inventário na batalha)
     private Jogador dono;
 
     public Personagem(String nome, int vida, int ataque, int defesa) {
@@ -19,7 +17,7 @@ public abstract class Personagem extends Entidade implements Acoes {
     }
 
     // ---------------------------
-    // 🔥 GET/SET DO DONO
+    // GET/SET DO DONO
     // ---------------------------
     public void setDono(Jogador dono) {
         this.dono = dono;
@@ -70,13 +68,13 @@ public abstract class Personagem extends Entidade implements Acoes {
     public void receberDano(int dano) {
         int danoFinal = dano;
 
-        // Se for Personagem, aplica a defesa total (base + temporária)
+        // aplica a defesa total (base + temporária)
         if (this instanceof Personagem) {
             Personagem p = (Personagem) this;
             int def = p.getDefesaTotal();
             danoFinal = dano - def;
             if (danoFinal < 0) danoFinal = 0;
-            // defesa temporária é consumida ao absorver dano
+            // defesa temporaria eh consumida ao absorver dano
             p.resetarDefesaTemporaria();
         }
 

@@ -103,9 +103,9 @@ public class Batalha {
 
         // escolhe alvo dependendo do tipo da habilidade
         if (h.getTipo() == TipoHabilidade.CURA) {
-            jogador.usarHabilidade(h, jogador); // cura a si mesmo (personagem)
+            jogador.usarHabilidade(h, jogador); // cura a si mesmo
         } else {
-            jogador.usarHabilidade(h, inimigo); // habilidade ofensiva no inimigo
+            jogador.usarHabilidade(h, inimigo); // habilidade
         }
     }
 

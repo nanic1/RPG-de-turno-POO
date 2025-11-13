@@ -9,18 +9,18 @@ public class Guerreiro extends Personagem {
     public void atacar(Entidade alvo) {
         int dano = ataque - (int)(Math.random() * 5);
         alvo.receberDano(dano);
-        System.out.println(nome + " golpeia " + alvo.getNome() + " causando " + dano + " de dano!");
+        System.out.printf("%s golpeia " + alvo.getNome() + " causando %d de dano", nome, dano);
     }
 
     @Override
     public void defender() {
-        System.out.println(nome + " ergue o escudo!");
+        System.out.printf("%s, ergue o escudo!", nome);
         aplicarDefesaTemporaria(5);
     }
 
     @Override
     public void usarHabilidade(Habilidade h, Entidade alvo) {
-        System.out.println(nome + " usa " + h.getNome() + "!");
+        System.out.printf("%s dispara " + h.getNome() + "!", nome);
         alvo.receberDano(h.getPoder());
     }
 }

@@ -14,8 +14,8 @@ public class Arqueiro extends Personagem {
 
     @Override
     public void defender() {
-        System.out.println(nome + " se esquiva habilmente!");
-        defesa += 4;
+        System.out.println(nome + " ergue o escudo!");
+        aplicarDefesaTemporaria(5); // +5 apenas para o próximo golpe
     }
 
     @Override

@@ -14,8 +14,8 @@ public class Mago extends Personagem {
 
     @Override
     public void defender() {
-        System.out.println(nome + " cria uma barreira mágica!");
-        defesa += 3;
+        System.out.println(nome + " ergue o escudo!");
+        aplicarDefesaTemporaria(5); // +5 apenas para o próximo golpe
     }
 
     @Override

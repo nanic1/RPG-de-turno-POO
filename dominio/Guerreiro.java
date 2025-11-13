@@ -15,7 +15,7 @@ public class Guerreiro extends Personagem {
     @Override
     public void defender() {
         System.out.println(nome + " ergue o escudo!");
-        defesa += 5;
+        aplicarDefesaTemporaria(5);
     }
 
     @Override

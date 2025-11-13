@@ -29,7 +29,7 @@ public class Batalha {
             turnoInimigo();
         }
 
-        System.out.println(jogador.estaViva() ? "\n🎉 Vitória!" : "\n💀 Derrota...");
+        System.out.println(jogador.estaViva() ? "\nVitória!" : "\nDerrota...");
     }
 
     private void turnoJogador() {
@@ -74,9 +74,8 @@ public class Batalha {
     private void turnoInimigo() {
         System.out.println("\n--- Turno do inimigo ---");
 
-        // decisão simples: 20% de chance de defender, senão atacar
+        // 20% de chance de defender, senão atacar
         if (Math.random() < 0.2) {
-            // se quiser que defesa do inimigo seja relevante, implemente defesa nele
             inimigo.defender();
         } else {
             inimigo.atacar(jogador);
@@ -84,7 +83,7 @@ public class Batalha {
     }
 
     private void escolherHabilidade() {
-        if (jogador.getHabilidades().isEmpty()) {
+        if (jogador.getHabilidades().isEmpty()) { // se estiver vazio, nao checa nada e retorna que nao tens item
             System.out.println("Você não possui habilidades!");
             return;
         }

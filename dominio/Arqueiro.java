@@ -10,6 +10,7 @@ public class Arqueiro extends Personagem {
         int dano = ataque + (int)(Math.random() * 5);
         alvo.receberDano(dano);
         System.out.println(nome + " atira uma flecha em " + alvo.getNome() + " causando " + dano + " de dano!");
+        System.out.printf("%s atira uma flecha em " + alvo.getNome() + " causando %d de dano\n",nome, dano);
     }
 
     @Override

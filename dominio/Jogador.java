@@ -30,7 +30,7 @@ public class Jogador {
         if (xp >= nivel * 50) {
             nivel++;
             xp = 0;
-            System.out.println(nome + " subiu para o nível " + nivel + "!");
+            System.out.printf("%s subiu para o nível %d\n", nome, nivel);
         }
     }
 
@@ -41,6 +41,9 @@ public class Jogador {
     }
 
     public void mostrarStatus() {
-        System.out.println("Jogador: " + nome + " | Nível: " + nivel + " | XP: " + xp);
+        System.out.printf("Jogador: %s | Nível: %d | XP: %d\n", nome, nivel, xp);
     }
+
+    public void ordenarPersonagensPorNome() {
+        personagens.sort(Comparator.comparing(Personagem::getNome));}
 }

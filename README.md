@@ -32,3 +32,4 @@ Defender: reduz parte do dano recebido no próximo ataque.
 Usar habilidade: dependendo do tipo, pode causar dano, curar ou aumentar defesa temporariamente.
 
 O jogo segue até que um dos personagens chegue a zero de vida.
+  

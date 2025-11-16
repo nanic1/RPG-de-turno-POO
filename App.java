@@ -7,15 +7,24 @@ public class App {
         Random rand = new Random();
         Jogador jogador = new Jogador("Herói");
 
-        Guerreiro guerreiro = new Guerreiro("Ragnar");
-        Mago mago = new Mago("Merlin");
-        Arqueiro arqueiro = new Arqueiro("Robin");
+        Guerreiro guerreiro = new Guerreiro("Radagon");
+        Mago mago = new Mago("Logan");
+        Arqueiro arqueiro = new Arqueiro("Gough");
+
+        Habilidade golpeDuplo = new Habilidade("Golpe Duplo", TipoHabilidade.ATAQUE, 22);
+        Habilidade bolaDeFogo = new Habilidade("Bola de Fogo", TipoHabilidade.ATAQUE, 30);
+        Habilidade chuvaDeFlechas = new Habilidade("Chuva de Flechas", TipoHabilidade.ATAQUE, 222);
 
         jogador.adicionarPersonagem(guerreiro);
         jogador.adicionarPersonagem(mago);
         jogador.adicionarPersonagem(arqueiro);
 
-        System.out.println("=== Bem-vindo ao RPG: Aventura no Reino ===");
+        guerreiro.adicionarHabilidade(golpeDuplo);
+        mago.adicionarHabilidade(bolaDeFogo);
+        arqueiro.adicionarHabilidade(chuvaDeFlechas);
+
+        System.out.println("Bem-vindo ao RPG: Aventura no Reino");
+        System.out.println("Criado por Pedro Kurtz, Gabriel Maccachero e Victor Coutinho");
 
         boolean jogando = true;
         while (jogando) {

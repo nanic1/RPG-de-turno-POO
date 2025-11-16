@@ -14,13 +14,14 @@ public class Arqueiro extends Personagem {
 
     @Override
     public void defender() {
-        System.out.printf("%s ergue o escudo!", nome);
-        aplicarDefesaTemporaria(5); // +5 apenas para o próximo golpe
+        defendendo = true;
+        defesaGasta = false;
+        System.out.printf("%s ergue o escudo!\n", nome);
     }
 
     @Override
     public void usarHabilidade(Habilidade h, Entidade alvo) {
-        System.out.printf("%s dispara " + h.getNome() + "!", nome);
         alvo.receberDano(h.getPoder());
+        System.out.printf("%s dispara " + h.getNome() + " e causa " + h.getPoder() + " de dano!\n", nome);
     }
 }

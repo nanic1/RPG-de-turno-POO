@@ -7,7 +7,7 @@ public class Inventario {
 
     public void adicionar(Item item) {
         itens.add(item);
-        System.out.println("Você obteve: " + item.getNome());
+        System.out.println("Você obteve: " + item.getNome() + "!\n");
     }
 
     public void listar() {

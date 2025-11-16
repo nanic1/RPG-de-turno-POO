@@ -12,16 +12,18 @@ public class Inimigo extends Entidade implements Acoes {
     public void atacar(Entidade alvo) {
         int dano = ataque + (int)(Math.random() * 5);
         alvo.receberDano(dano);
-        System.out.println(nome + " ataca " + alvo.getNome() + " causando " + dano + " de dano!");
+        System.out.printf("%s ataca %s causando %d de dano!\n", nome, alvo.getNome(), dano);
     }
 
     @Override
     public void defender() {
-        System.out.println(nome + " tenta bloquear o ataque!");
+        defendendo = true;
+        defesaGasta = false;
+        System.out.printf("%s tenta bloquear o ataque!\n", nome);
     }
 
     @Override
     public void mostrarStatus() {
-        System.out.println(nome + " [HP: " + vidaAtual + "/" + vidaMaxima + "]");
+        System.out.printf("%s [HP: %d / %d]\n", nome, vidaAtual, vidaMaxima);
     }
 }

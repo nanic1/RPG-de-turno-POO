@@ -17,7 +17,7 @@ public class Item {
 
     public void usar(Entidade alvo) {
         alvo.curar(efeito);
-        System.out.printf(alvo.getNome() + " usa %s e recupera %d de vida!", nome, efeito);
+        System.out.printf(alvo.getNome() + " usa %s e recupera %d de vida!\n", nome, efeito);
     }
 
     @Override

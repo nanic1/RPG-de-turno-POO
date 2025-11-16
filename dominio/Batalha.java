@@ -16,7 +16,8 @@ public class Batalha {
         System.out.println("\n--- A batalha começou! ---");
 
         while (jogador.estaViva() && inimigo.estaViva()) {
-
+            jogador.resetDefesa();
+            inimigo.resetDefesa();
             System.out.println("\n===== STATUS =====");
             jogador.mostrarStatus();
             inimigo.mostrarStatus();

@@ -1,12 +1,12 @@
-# RPG de Turno --- Projeto em Java
+# RPG de Turno - Projeto em Java
 
 Este projeto implementa um RPG de turno simples utilizando **POO
 (Programação Orientada a Objetos)**.\
 Inclui dois aplicativos principais:
 
-### **1️ App.java** --- Versão interativa com Scanner
+### **1️ AppInterativo.java** - Versão interativa com Scanner
 
-### **2️ AppRoteiro.java** --- Execução totalmente determinística, sem entrada do usuário
+### **2️ AppRoteiro.java** - Execução totalmente determinística, sem entrada do usuário
 
 O projeto segue conceitos como:
 

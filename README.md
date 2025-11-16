@@ -46,7 +46,7 @@ O projeto segue conceitos como:
 Abra o terminal na pasta `src/` e execute:
 
 ``` bash
-javac dominio/*.java App.java AppRoteiro.java
+javac dominio/*.java AppInterativo.java AppRoteiro.java
 ```
 
 ------------------------------------------------------------------------
@@ -56,7 +56,7 @@ javac dominio/*.java App.java AppRoteiro.java
 ### **Executar o App principal (versão com Scanner)**
 
 ``` bash
-java App
+java AppInterativo
 ```
 
 ### **Executar o AppRoteiro (versão determinística)**

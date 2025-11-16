@@ -1,35 +1,72 @@
-RPG de Turnos — Projeto POO (Console)
+# RPG de Turno --- Projeto em Java
 
-Este projeto é um jogo simples de RPG baseado em turnos, desenvolvido para praticar Programação Orientada a Objetos em Java.
-O jogo roda no console e envolve personagens, ataques, defesa e uso de habilidades básicas.
+Este projeto implementa um RPG de turno simples utilizando **POO
+(Programação Orientada a Objetos)**.\
+Inclui dois aplicativos principais:
 
-O foco principal é mostrar como organizar classes, herança, polimorfismo e encapsulamento dentro de um pequeno sistema de batalha.
+### **1️ App.java** --- Versão interativa com Scanner
 
-Estrutura do Jogo
+### **2️ AppRoteiro.java** --- Execução totalmente determinística, sem entrada do usuário
 
-O jogo funciona em turnos: um personagem age, depois o outro responde. Cada entidade pode atacar, defender ou usar uma habilidade simples definida em seu tipo (como cura ou dano direto).
+O projeto segue conceitos como:
 
-As classes principais são:
+-   Herança (`Personagem`, `Guerreiro`, `Mago`, `Inimigo`)\
+-   Composição (`Inventario`, `Item`)\
+-   Associação unidirecional e bidirecional\
+-   Sobrescrita de métodos\
+-   Encapsulamento\
+-   Polimorfismo em ações (`Acoes`)
 
-Entidade: base para qualquer ser que participa da batalha. Possui nome, vida, ataque e defesa.
+------------------------------------------------------------------------
 
-Personagem: extensão de Entidade que representa o jogador. Pode atacar, defender e usar habilidades.
+# Estrutura do Projeto
 
-Mago (ou outras classes específicas): personagens com comportamento próprio de ataque e defesa.
+    src/
+     ├── AppInterativo.java
+     ├── AppRoteiro.java
+     └── dominio/
+         ├── Entidade.java
+         ├── Personagem.java
+         ├── Guerreiro.java
+         ├── Mago.java
+         ├── Inimigo.java
+         ├── Habilidade.java
+         ├── TipoHabilidade.java
+         ├── Item.java
+         ├── Inventario.java
+         ├── Jogador.java
+         ├── Acoes.java
 
-Habilidade: representa ações especiais simples (como cura ou dano direto).
+------------------------------------------------------------------------
 
-TipoHabilidade: define o tipo da habilidade (ATAQUE, CURA ou DEFESA).
+# Como Compilar
 
-Mecânica de Batalha
+> É necessário ter **JDK 17+** instalado.
 
-Cada ação do personagem segue regras básicas:
+Abra o terminal na pasta `src/` e execute:
 
-Atacar: causa dano no alvo usando o valor de ataque.
+``` bash
+javac dominio/*.java App.java AppRoteiro.java
+```
 
-Defender: reduz parte do dano recebido no próximo ataque.
+------------------------------------------------------------------------
 
-Usar habilidade: dependendo do tipo, pode causar dano, curar ou aumentar defesa temporariamente.
+# Como Executar
 
-O jogo segue até que um dos personagens chegue a zero de vida.
-  
+### **Executar o App principal (versão com Scanner)**
+
+``` bash
+java App
+```
+
+### **Executar o AppRoteiro (versão determinística)**
+
+``` bash
+java AppRoteiro
+```
+
+# Representantes do grupo
+
+- Pedro de Castro Kurtz (202407278752)
+- Gabriel Maccachero Araujo (202501441823)
+- Victor Coutinho
